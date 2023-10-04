@@ -4,16 +4,20 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	// VS Code IDs of extensions that should be installed for the container
-	"extensions": [
-		// Add VS Code WASM 
-		"dtsvet.vscode-wasm",
-		// Add ESLint extension 
-		"dbaeumer.vscode-eslint",
-		// Allow for Copilot 
-		"GitHub.copilot"
-	],
-  // Establish a non-root user
-  // https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"customizations": {
+		"codespaces": {
+			"openFiles": []
+		},
+		"vscode": {
+			// VS Code IDs of extensions that should be installed for the container
+			"extensions": [
+				// Add VS Code WASM 
+				"dtsvet.vscode-wasm",
+				// Add ESLint extension 
+				"dbaeumer.vscode-eslint",
+				// Allow for Copilot 
+				"GitHub.copilot"
+			]
+		}
+	}
 }
